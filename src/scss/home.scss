@@ -1,0 +1,22 @@
+.page {
+	position: relative;
+}
+.socials {
+	position: absolute;
+	top: rem(350);
+	right: rem(-90);
+	transform: rotate(-90deg);
+	// .socials__list
+	&__list {
+		display: flex;
+		column-gap: rem(40);
+	}
+	// .socials__item
+	&__item {
+	}
+	// .socials__link
+	&__link {
+		font-weight: 500;
+		letter-spacing: rem(1);
+	}
+}
