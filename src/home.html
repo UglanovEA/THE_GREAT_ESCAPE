@@ -1,26 +1,53 @@
 <!DOCTYPE html>
 <html lang="ru">
-  @@include('html/_head.htm',{ "title":"Главная" })
-  <body>
-    <div class="wrapper">
-      @@include('html/_header.htm',{})
-      <main class="page">
-        <nav class="page-socials socials">
-          <ul class="socials__list">
-            <li class="socials__item">
-              <a href="#!" class="socials__link">Facebook</a>
-            </li>
-            <li class="socials__item">
-              <a href="#!" class="socials__link">Twitter</a>
-            </li>
-            <li class="socials__item">
-              <a href="#!" class="socials__link">Instagram</a>
-            </li>
-          </ul>
-        </nav>
-      </main>
-      @@include('html/_footer.htm',{})
-    </div>
-    @@include('html/_js.htm',{})
-  </body>
+	@@include('html/_head.htm',{ "title":"Главная" })
+	<body>
+		<div class="wrapper">
+			<main class="page">
+				<section class="header">
+					<nav class="header__nav">
+						<div class="header__title">lookbook</div>
+						<div class="header__categories">
+							<ul class="header__list">
+								<li class="header__item">
+									<a href="#!" class="header__link">man</a>
+								</li>
+								<li class="header__item">
+									<a href="#!" class="header__link">women</a>
+								</li>
+							</ul>
+						</div>
+						<div class="header__menu _icon-burger"></div>
+						<div class="header__search _icon-search"></div>
+					</nav>
+				</section>
+				<nav class="socials">
+					<ul class="socials__list">
+						<li class="socials__item">
+							<a href="#!" class="socials__link">Facebook</a>
+						</li>
+						<li class="socials__item">
+							<a href="#!" class="socials__link">Twitter</a>
+						</li>
+						<li class="socials__item">
+							<a href="#!" class="socials__link">Instagram</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="image-one">
+					<img src="@img/image01.jpg" alt="image" />
+					<div class="image-block"></div>
+				</div>
+				<div class="image-two">
+					<img src="@img/image02.png" alt="image" />
+					<div class="image-block"></div>
+				</div>
+				<div class="texts">
+					<h1 class="texts__title">The Great Escape</h1>
+					<p class="texts__subtitle">Issue two out now</p>
+				</div>
+			</main>
+		</div>
+		@@include('html/_js.htm',{})
+	</body>
 </html>

@@ -1,10 +1,56 @@
 .page {
+	width: 100%;
+	height: 100vh;
 	position: relative;
+	background: #8c6c79;
 }
+.header {
+	text-transform: uppercase;
+	padding: 0 rem(50);
+	// .header__nav
+	&__nav {
+		height: rem(80);
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	// .header__title
+	&__title {
+		font-size: rem(24);
+		font-weight: 600;
+		letter-spacing: rem(2);
+		margin-right: rem(200);
+	}
+	// .header__categories
+	&__categories {
+		margin-right: auto;
+	}
+	// .header__list
+	&__list {
+		display: flex;
+		column-gap: rem(80);
+	}
+	// .header__item
+	&__item {
+	}
+	// .header__link
+	&__link {
+		font-weight: 500;
+		letter-spacing: rem(1);
+	}
+	// .header__menu
+	&__menu {
+		margin-right: rem(50);
+	}
+	// .header__search
+	&__search {
+	}
+}
+
 .socials {
 	position: absolute;
 	top: rem(350);
-	right: rem(-90);
+	right: rem(-110);
 	transform: rotate(-90deg);
 	// .socials__list
 	&__list {
@@ -18,5 +64,89 @@
 	&__link {
 		font-weight: 500;
 		letter-spacing: rem(1);
+	}
+}
+
+.image-one {
+	position: absolute;
+	top: rem(120);
+	left: rem(200);
+	& img {
+		height: rem(500);
+		width: rem(350);
+		object-fit: cover;
+		opacity: 0;
+		animation: image-appear 0.0001s linear forwards;
+		animation-delay: 2.2s;
+	}
+}
+.image-block {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0%;
+	height: 100%;
+	background: #a37c8c;
+	animation: block-appear 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+	animation-delay: 1.5s;
+}
+.image-two {
+	position: absolute;
+	top: 0;
+	left: rem(650);
+	& img {
+		height: 100vh;
+		width: rem(800);
+		object-fit: cover;
+		opacity: 0;
+		animation: image-appear 0.0001s linear forwards;
+		animation-delay: 2.4s;
+	}
+	.image-block {
+		animation-delay: 1.8s;
+	}
+}
+@keyframes image-appear {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@keyframes block-appear {
+	0% {
+		left: 0;
+		width: 0%;
+	}
+	50% {
+		left: 0;
+		width: 100%;
+	}
+	100% {
+		left: 100%;
+		width: 0%;
+	}
+}
+
+.texts {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: "Tinos";
+	white-space: nowrap;
+	letter-spacing: rem(5);
+	// .texts__title
+	&__title {
+		font-size: rem(120);
+		&:not(:last-child) {
+			margin-bottom: em(20, 120);
+		}
+	}
+	// .texts__subtitle
+	&__subtitle {
+		font-size: rem(40);
+		text-transform: uppercase;
 	}
 }
