@@ -2,11 +2,11 @@
 <html lang="ru">
 	@@include('html/_head.htm',{ "title":"Главная" })
 	<body>
-		<div class="wrapper">
+		<section class="wrapper">
 			<main class="page">
 				<section class="header">
 					<nav class="header__nav">
-						<div class="header__title">lookbook</div>
+						<h2 class="header__title">lookbook</h2>
 						<div class="header__categories">
 							<ul class="header__list">
 								<li class="header__item">
@@ -17,7 +17,7 @@
 								</li>
 							</ul>
 						</div>
-						<div class="header__menu _icon-burger"></div>
+						<div class="header__menu _icon-menu"></div>
 						<div class="header__search _icon-search"></div>
 					</nav>
 				</section>
@@ -42,10 +42,32 @@
 					<img src="@img/image02.png" alt="image" />
 					<div class="image-block"></div>
 				</div>
-				<div class="texts">
+				<section class="texts">
 					<h1 class="texts__title">The Great Escape</h1>
 					<p class="texts__subtitle">Issue two out now</p>
+				</section>
+				<div class="desc">
+					<ul class="desc__list">
+						<li class="desc__item"><a href="#!" class="desc__link">Volume 01</a></li>
+						<li class="desc__item"><a href="#!" class="desc__link">Volume 02</a></li>
+					</ul>
+					<p class="desc__text">
+						A fashion insight into leading summer styles, travel destinations to may never of thought of, a beginners guide to S&M and much much more.
+					</p>
 				</div>
+				<div class="scrolldown">scroll down</div>
+				<section class="footer">
+					<h2 class="footer__title">up next</h2>
+					<div class="footer__arrows">
+						<div class="footer__arrow">
+							<div class="_icon-arrow-up"></div>
+							<div class="_icon-arrow-down"></div>
+						</div>
+						<div class="footer__img">
+							<img src="@img/footer.jpg" alt="image">
+						</div>
+					</div>
+				</section>
 			</main>
 		</div>
 		@@include('html/_js.htm',{})
